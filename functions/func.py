@@ -1,5 +1,3 @@
-from math import pow
-
 def start():
     return Calculator()
 
