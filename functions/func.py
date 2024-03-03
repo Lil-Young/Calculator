@@ -1,3 +1,5 @@
+from math import pow
+
 def start():
     return Calculator()
 
@@ -20,6 +22,12 @@ class Calculator:
         self.result *= n
         return self.result
     
+    def square(self, n):
+        self.result = pow(self.result, n)
+        if (str(self.result*10))[-1] == '0':
+            self.result = int(self.result)
+        return self.result
+
     def div(self, n):
         if n == 0:
             print("0으로 나눌 수 없습니다.")
@@ -27,7 +35,6 @@ class Calculator:
         self.result = (self.result / n)
         if (str(self.result*10))[-1] == '0':
             self.result = int(self.result)
-            return self.result
         return self.result
     
     def div_quo(self, n):
